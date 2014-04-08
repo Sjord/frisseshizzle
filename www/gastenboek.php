@@ -12,11 +12,18 @@ if ($_POST['comment']) {
 
 include('header.php'); 
 
-$result = $mysqli->query("SELECT * FROM entries ORDER BY id DESC");
+$query = "SELECT * FROM entries ";
+if ($_GET['entry']) {
+    $query .= "WHERE id=$_GET[entry]";
+    echo '<a href="gastenboek.php">Toon alle reacties</a>';
+}
+$query .= " ORDER BY id DESC";
+
+$result = $mysqli->query($query);
 while ($row = $result->fetch_assoc()) {
     echo "<p class='jumbotron'>";
     if ($row['afbeelding']) {
-        echo "<img src='getfile.php?file=$row[afbeelding]' style='max-height: 100px; max-width: 100px;'>";
+        echo "<a href='gastenboek.php?entry=$row[id]'><img src='getfile.php?file=$row[afbeelding]' style='max-height: 100px; max-width: 100px;'></a>";
     }
     echo "$row[comment]</p>";
 }
