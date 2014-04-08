@@ -1,0 +1,4 @@
+AuthType basic
+AuthName "Frisse Shizzle"
+Require valid-user
+AuthUserFile .htpasswd
