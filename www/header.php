@@ -30,8 +30,13 @@
         </div>    
         <div>
             <ul class="nav navbar-nav">
+                <li><a href="robot.php">ijsrobot</a></li>
                 <li><a href="blog">blog</a></li>
                 <li><a href="gastenboek.php">gastenboek</a></li>
+                <li><a href="clickjack.php">clickjacking</a></li>
+                <li><a href="csrf.php">CSRF</a></li>
+                <li><a href="http://www.omroepflevoland.nl/Nieuws/90038/almere-culinair-journalist-verkoopt-ijs-via-de-post">echt postorderijs</a></li>
+                <li><a href="https://www.youtube.com/watch?v=ahiZpXnuKnY">echte ijsrobot</a></li>
             </ul>    
         </div>        
     </div>
