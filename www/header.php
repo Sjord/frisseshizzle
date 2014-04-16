@@ -35,6 +35,9 @@
                 <li><a href="gastenboek.php">gastenboek</a></li>
                 <li><a href="clickjack.php">clickjacking</a></li>
                 <li><a href="csrf.php">CSRF</a></li>
+                <li><a href="http://xkcd.com/1354/">heartbleed</a></li>
+                <li><a href="http://xkcd.com/538/">wrench</a></li>
+                <li><a href="http://xkcd.com/327/">Bobby Tables</a></li>
                 <li><a href="http://www.omroepflevoland.nl/Nieuws/90038/almere-culinair-journalist-verkoopt-ijs-via-de-post">echt postorderijs</a></li>
                 <li><a href="https://www.youtube.com/watch?v=ahiZpXnuKnY">echte ijsrobot</a></li>
             </ul>    
