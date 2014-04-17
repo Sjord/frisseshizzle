@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Sample CSSS presentation</title>
+
+<!-- Don't alter this, CSSS needs it to work -->
+<link href="slideshow.css" rel="stylesheet" />
+
+<!-- Theme-specific styles go here (themes can be reused in multiple talks) -->
+<link href="theme.css" rel="stylesheet" />
+
+<!-- Talk-specific styles go here -->
+<link href="talk.css" rel="stylesheet" />
+
+<!-- Take care of prefixes -->
+<script src="prefixfree.min.js"></script>
+
+</head>
+<body>
+
+<section>
+	<header class="slide">
+        <h1>Webapplicatie veiligheid</h1>
+	</header>
+	
+	<section class="slide">
+		<h2>Webapplicatie</h2>
+        <ul>
+            <li>Webshop</li>
+            <li>Service Panel</li>
+            <li>Quickscan</li>
+            <li>Klant</li>
+        </ul>
+	</section>
+
+	<section class="slide">
+		<h2>Veiligheid</h2>
+        <ul>
+            <li>Toegang tot gegevens</li>
+            <li>DoS of defacement</li>
+            <li>Misbruik van resources</li>
+            <li>Gratis ijs</li>
+        </ul>
+	</section>
+
+    <section class="slide">
+        <h2>Wie is de hacker?</h2>
+        <ul>
+            <li>Veiligheid onderzoeken</li>
+            <li>Op één site binnen komen</li>
+            <li>Eén <a href="http://web.nvd.nist.gov/view/vuln/search-results?query=joomla&search_type=all&cves=on">lek</a> proberen tegen alle sites</li>
+        </ul>
+    </section>
+
+	<section class="slide">
+		<h2>Hoe hack ik een webapp?</h2>
+        <p>
+            Doe een request wat de applicatie
+            iets ongewenst laat doen.
+        </p>
+	</section>
+
+	<section class="slide">
+		<h2>Wat helpt niet?</h2>
+        <ul>
+            <li>Firewall*</li>
+            <li>SSL</li>
+        </ul>
+		<h2>Wat helpt wel?</h2>
+        <ul>
+            <li>Beter programmeren</li>
+        </ul>
+	</section>
+
+	<section class="slide">
+		<h2>Voorbeeld</h2>
+        <p>
+            <a href="http://www.frisseshizzle.nl/">DoS op de ijsrobot</a>
+        </p>
+	</section>
+
+	<section class="slide">
+		<h2>Voorbeeld</h2>
+        <p>
+            <a href="https://service.byte.nl/protected/domein/resources/buildingblocks/redis.cgi">Gratis redis</a>
+        </p>
+	</section>
+
+	<section class="slide">
+		<h2>SQL injection</h2>
+        <tt>SELECT * FROM gastenboek WHERE id=$id</tt>
+        <ul>
+            <li>1</li>
+            <li>1 OR id=2</li>
+            <li>1 UNION SELECT 1, username, password FROM users <a href="http://www.frisseshizzle.nl/gastenboek.php?entry=1%20UNION%20SELECT%201,%20username,%20password%20FROM%20users">→</a></li>
+        </ul>
+	</section>
+
+    <section class="slide">
+        <img src="http://imgs.xkcd.com/comics/exploits_of_a_mom.png" style="width: 100%">
+    </section>
+
+	<section class="slide">
+		<h2>Cross site scripting</h2>
+        <ul>
+            <li>&lt;h1&gt;Echt heul lekker&lt;/h1&gt;</li>
+            <li>&lt;script&gt;alert(&quot;ijsconcurrent.nl&quot;);&lt;/script&gt;</li>
+            <li>Cookies pikken</li>
+            <li>DDoS</li>
+        </ul>
+	</section>
+
+    <section class="slide">
+		<h2>CSRF, clickjacking</h2>
+        <ul>
+            <li>Jij bent ingelogged op jouw site (quickscan, klant)</li>
+            <li>De boef lokt je naar zijn site</li>
+            <li>De boevensite stuurt stiekem een request naar jouw site</li>
+        </ul>
+	</section>
+
+    <section class="slide">
+		<h2>Code uploaden</h2>
+        <ul>
+            <li>In plaats van een plaatje upload je een <a href="https://code.google.com/p/b374k-shell/">PHP bestand</a></li>
+        </ul>
+	</section>
+
+    <section class="slide">
+        <img src="http://imgs.xkcd.com/comics/security.png" style="width: 80%;">
+    </section>
+
+
+</section>
+
+<footer class="slide">
+	<h2>Klaar!</h2>
+	<p>Vragen?</p>
+</footer>
+
+<script src="slideshow.js"></script>
+
+<!-- Uncomment the plugins you need
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+-->
+<script>var slideshow = new SlideShow();</script>
+	
+</body>
+</html>
