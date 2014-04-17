@@ -20,6 +20,10 @@ if ($_GET['entry']) {
 $query .= " ORDER BY id DESC";
 
 $result = $mysqli->query($query);
+if (!$result) {
+    echo "Er is iets fout gegaan: ";
+    echo $mysqli->error;
+}
 while ($row = $result->fetch_assoc()) {
     echo "<p class='jumbotron'>";
     if ($row['afbeelding']) {
