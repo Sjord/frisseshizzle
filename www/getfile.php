@@ -1,3 +1,3 @@
 <?php
-$file = $_GET['file'];
+$file = basename($_GET['file']);
 return readfile(dirname(__FILE__).'/pics/'.$file);

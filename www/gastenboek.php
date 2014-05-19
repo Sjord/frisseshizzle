@@ -2,7 +2,7 @@
 include('config.php');
 $mysqli = new mysqli($server, $username, $password, $database);
 
-if ($_POST['comment']) {
+if (false && $_POST['comment']) {
     $comment = $_POST['comment'];
     $afbeelding = $_FILES['userfile']['name'];
     $dest = dirname(__FILE__).'/pics/'.$afbeelding;
@@ -13,7 +13,7 @@ if ($_POST['comment']) {
 include('header.php'); 
 
 $query = "SELECT * FROM entries ";
-if ($_GET['entry']) {
+if (false && $_GET['entry']) {
     $query .= "WHERE id=$_GET[entry]";
     echo '<a href="gastenboek.php">Toon alle reacties</a>';
 }
