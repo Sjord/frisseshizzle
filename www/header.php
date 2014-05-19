@@ -31,7 +31,7 @@
         <div>
             <ul class="nav navbar-nav">
                 <li><a href="robot.php">ijsrobot</a></li>
-                <li><a href="blog">blog</a></li>
+                <li><a href="slides/">slides</a></li>
                 <li><a href="gastenboek.php">gastenboek</a></li>
                 <li><a href="clickjack.php">clickjacking</a></li>
                 <li><a href="csrf.php">CSRF</a></li>
